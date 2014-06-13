@@ -1,0 +1,11 @@
+{
+  "generator-backbone": {
+    "appPath": true,
+    "appName": "TestingBackend",
+    "coffee": false,
+    "testFramework": "mocha",
+    "templateFramework": "lodash",
+    "compassBootstrap": false,
+    "includeRequireJS": true
+  }
+}
