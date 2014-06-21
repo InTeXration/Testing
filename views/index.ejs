@@ -3,12 +3,51 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Intexration: Latex integration for <Github></Github></title>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://bootflat.github.io/bootflat/css/bootflat.css">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/normalize.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/foundation.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <style>
-        p{
+        body{
             font-size: 16px;
+            line-height: 1.5em;
         }
+
+        .github{
+            background-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                color-stop(0, #FFFFFF),
+                color-stop(1, #E0E0E0)
+            );
+            background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
+            background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
+            background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
+            background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
+            background-image: linear-gradient(to bottom, #FFFFFF 0%, #E0E0E0 100%);
+            color: #3D3D3D ;
+            font-weight: bold;
+            border: 1px solid #DDD;
+            border-radius: 6px;
+            font-size: 1.25em;
+            line-height: 
+        }
+
+        .standard_button{
+            border-radius: 6px;
+        }
+
+        .container{
+            margin-top: 25px;
+        }
+        .margin-icon{
+            margin-right: 5px;
+        }
+
+
+
     </style>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -18,73 +57,33 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">InteXration</a>
-        </div>
-
-
-        <div class="navbar-header"></div>
-            <form class="navbar-form navbar-right" role="login">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-        </div>
-
-
+<nav class="top-bar" role="navigation">
+    <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Intexration</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 </nav>
+
 <div class="container">
-    <div class="col-md-6">
-        <h2>Welcome to Intexration!</h2>
-        <div class="graph"></div>
-            <p>
-                Integrate pdfs based on latex projects into websites without hassle!
-            </p>
+<div class="row">
+  <div class="medium-8 medium-centered columns">
+    <img src="https://camo.githubusercontent.com/b80f23799c54cb2e9539412050caacdd22ff6eae/687474703a2f2f63646e2e6a6f6e61736465766c696567686572652e636f6d2f696e746578726174696f6e2e706e67" alt="intexration-logo">
+    <h2>Login <small> to get started!</small></h2>
+    <p>
+        Integrate pdfs based on latex projects into websites without hassle! 
+      We use github to automatically recompile your files without intervation.
+    </p>
 
-            <p>
-                We use github to automatically recompile your files without intervation.
-            </p>
-    </div>
-    <div class="col-md-6">
-        <h2>Register <small> to get started!</small></h2>
-        <form role="form">
-            <div class="form-group">
-                <input type="text" name="username" id="username" class="form-control" placeholder="Username"/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" name="email" id="email" class="form-control" placeholder="Email"/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" name="github" id="github" class="form-control" placeholder="Github Handle"/>
-            </div>
-
-            <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password"/>
-            </div>
-
-            <div class="form-group">
-                <input type="password" name="password2" id="password2" class="form-control" placeholder="Repeat Password"/>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary col-xs-12"> Register</button>
-            </div>
-        </form>
-    </div>
+    <p>
+        The first time you login with github, an intexration account will be created automatically.
+    </p>
+      
+      <a href="#" class="button  expand github"> <i class="fa fa-github margin-icon"></i>login with github</a>
+  </div>
+</div>
 </div>
 </body>
 </html>
