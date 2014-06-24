@@ -4,86 +4,151 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Intexration: Latex integration for <Github></Github></title>
 
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/normalize.min.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <style>
-        body{
-            font-size: 16px;
-            line-height: 1.5em;
+    <!--<style>-->
+        <!--body{-->
+            <!--font-size: 16px;-->
+            <!--line-height: 1.5em;-->
+        <!--}-->
+
+        <!--.github{-->
+            <!--background-image: -webkit-gradient(-->
+                <!--linear,-->
+                <!--left top,-->
+                <!--left bottom,-->
+                <!--color-stop(0, #FFFFFF),-->
+                <!--color-stop(1, #E0E0E0)-->
+            <!--);-->
+            <!--background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);-->
+            <!--background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);-->
+            <!--background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);-->
+            <!--background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);-->
+            <!--background-image: linear-gradient(to bottom, #FFFFFF 0%, #E0E0E0 100%);-->
+            <!--color: #3D3D3D ;-->
+            <!--font-weight: bold;-->
+            <!--border: 1px solid #DDD;-->
+            <!--border-radius: 6px;-->
+            <!--font-size: 1.25em;-->
+        <!--}-->
+
+        <!--p{-->
+            <!--color: #3D3D3D;-->
+        <!--}-->
+
+        <!--.standard_button{-->
+            <!--border-radius: 6px;-->
+        <!--}-->
+
+        <!--.container{-->
+            <!--margin-top: 25px;-->
+        <!--}-->
+        <!--.margin-icon{-->
+            <!--margin-right: 5px;-->
+        <!--}-->
+        <!--.navigation{-->
+            <!--background-color: transparent;-->
+            <!--margin-top: 20px;-->
+            <!--border-bottom: 1px solid #E0E0E0;-->
+        <!--}-->
+
+        <!--.top-bar{-->
+            <!--background:none;-->
+
+        <!--}-->
+
+        <!--.top-bar a{-->
+            <!--color: #3D3D3D;-->
+            <!--font-weight: bold;-->
+        <!--}-->
+        <!--.top-bar .name h1 a{-->
+            <!--color: #3D3D3D;-->
+            <!--font-weight: bold;-->
+        <!--}-->
+
+        <!--.top-bar-section ul li{-->
+            <!--background: none;-->
+        <!--}-->
+
+    <!--</style>-->
+    <style type="text/css">
+
+        .divider{
+            border-bottom: 2px solid #DDD;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
 
-        .github{
-            background-image: -webkit-gradient(
-                linear,
-                left top,
-                left bottom,
-                color-stop(0, #FFFFFF),
-                color-stop(1, #E0E0E0)
-            );
-            background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
-            background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
-            background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
-            background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #E0E0E0 100%);
-            background-image: linear-gradient(to bottom, #FFFFFF 0%, #E0E0E0 100%);
-            color: #3D3D3D ;
-            font-weight: bold;
-            border: 1px solid #DDD;
-            border-radius: 6px;
-            font-size: 1.25em;
-            line-height: 
-        }
-
-        .standard_button{
-            border-radius: 6px;
-        }
 
         .container{
-            margin-top: 25px;
-        }
-        .margin-icon{
-            margin-right: 5px;
+           background-color: white;
+           padding: 10px;
         }
 
+        .fa{
+            margin-right: 5px;;
+        }
 
 
     </style>
 
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var chart = d3.select(".graph").append("svg:svg");
-    </script>
 </head>
 <body>
 
-<nav class="top-bar" role="navigation">
-    <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">Intexration</a></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-</nav>
+    <div class="row divider">
+        <nav class="top-bar " role="navigation">
+            <ul class="title-area">
+            <li class="name">
+              <h1><a href="#"><img src="https://camo.githubusercontent.com/b80f23799c54cb2e9539412050caacdd22ff6eae/687474703a2f2f63646e2e6a6f6e61736465766c696567686572652e636f6d2f696e746578726174696f6e2e706e67" alt="" style="height: 45px;"/></a></h1>
+            </li>
+             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
 
-<div class="container">
-<div class="row">
-  <div class="medium-8 medium-centered columns">
-    <img src="https://camo.githubusercontent.com/b80f23799c54cb2e9539412050caacdd22ff6eae/687474703a2f2f63646e2e6a6f6e61736465766c696567686572652e636f6d2f696e746578726174696f6e2e706e67" alt="intexration-logo">
-    <h2>Login <small> to get started!</small></h2>
-    <p>
-        Integrate pdfs based on latex projects into websites without hassle! 
-      We use github to automatically recompile your files without intervation.
-    </p>
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="active"><a href="#">Right Button Active</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Right Button Dropdown</a>
+                        <ul class="dropdown">
+                            <li><a href="#">First link in dropdown</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
 
-    <p>
-        The first time you login with github, an intexration account will be created automatically.
-    </p>
-      
-      <a href="#" class="button  expand github"> <i class="fa fa-github margin-icon"></i>login with github</a>
-  </div>
+
+    <div class="row divider container">
+      <div class="medium-8  columns">
+        <img src="https://camo.githubusercontent.com/b80f23799c54cb2e9539412050caacdd22ff6eae/687474703a2f2f63646e2e6a6f6e61736465766c696567686572652e636f6d2f696e746578726174696f6e2e706e67" alt="intexration-logo">
+
+
+
+
+      </div>
+      <div class="medium-4 columns">
+          <h2>Login <small> to get started!</small></h2>
+          <p>
+              Integrate pdfs based on latex projects into websites without hassle!
+              We use github to automatically recompile your files without intervation.
+          </p>
+
+          <p>
+              The first time you login with github, an intexration account will be created automatically.
+          </p>
+
+          <a href="#" class="button  expand github" style="background-color: #AAA"> <i class="fa fa-github margin-icon"></i>login with github</a>
+      </div>
 </div>
-</div>
+
+    <div class="row divider container" style="text-align: center">Jonas Devlieghere</div>
 </body>
 </html>
