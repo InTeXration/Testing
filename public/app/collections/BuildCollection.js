@@ -1,11 +1,11 @@
 define([
     'backbone',
-    '../models/RepoModel',
+    '../models/BuildModel',
 ], function (Backbone, Model) {
     'use strict';
 
     return Backbone.Collection.extend({
         model: Model,
-        url: '/repo'
+        url: '/build'
     });
 });

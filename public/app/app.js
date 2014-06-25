@@ -2,7 +2,7 @@
 
 define([
     'marionette',
-    'collections/RepoCollection',
+    'collections/BuildCollection',
     'views/Header',
     'views/Repo',
     'views/Footer'

@@ -3,5 +3,11 @@ define([
 ], function (app) {
     'use strict';
 
-    return{};
+    return{
+        document: function(owner, repo, name){
+            console.log(owner);
+            console.log(repo);
+            console.log(name);
+        }
+    };
 });
