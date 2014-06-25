@@ -2,6 +2,7 @@
     "name": "InTeXration",
     "version": "1.0.0",
     "dependencies": {
+        "requirejs": "*",
         "backbone": "*",
         "jquery": "*",
         "underscore": "*",
