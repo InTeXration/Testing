@@ -1,0 +1,9 @@
+{
+    "name": "InTeXration",
+    "version": "1.0.0",
+    "dependencies": {
+        "backbone": "*",
+        "jquery": "*",
+        "underscore": "*",
+    }
+}
