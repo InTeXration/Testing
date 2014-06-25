@@ -4,7 +4,7 @@ define([
 ], function (Marionette, templates) {
     'use strict';
 
-    return Marionette.Layout.extend({
+    return Marionette.LayoutView.extend({
         template: templates.footer
     });
 });

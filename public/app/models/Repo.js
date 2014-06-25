@@ -1,6 +1,5 @@
 define([
-    'backbone',
-    'localStorage'
+    'backbone'
 ], function (Backbone) {
     'use strict';
 
@@ -9,6 +8,5 @@ define([
         urlRoot: function() {
             return '/repo';
         }
-
     });
 });

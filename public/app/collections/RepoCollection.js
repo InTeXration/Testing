@@ -1,5 +1,3 @@
-/*global define */
-
 define([
     'backbone',
     'models/Repo',
@@ -7,6 +5,7 @@ define([
     'use strict';
 
     return Backbone.Collection.extend({
-        model: Repo
+        model: Repo,
+        url: '/repo'
     });
 });
